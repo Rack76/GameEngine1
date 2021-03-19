@@ -8,7 +8,6 @@
 #include "Renderer.h"
 #include "collisionDetection.h"
 #include "CapsuleObject.h"
-#include "Particle.h"
 #include <iostream>
 #include <cmath>
 

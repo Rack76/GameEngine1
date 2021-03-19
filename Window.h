@@ -1,8 +1,8 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
-#include <GL/glew.h>
-#include <SDL2/SDL.h>
+#include "GL/glew.h"
+#include "SDL2/SDL.h"
 
 class Window
 {
