@@ -53,8 +53,6 @@
 		<Unit filename="MeshLoader.h" />
 		<Unit filename="Object.cpp" />
 		<Unit filename="Object.h" />
-		<Unit filename="Particle.cpp" />
-		<Unit filename="Particle.h" />
 		<Unit filename="Renderer.cpp" />
 		<Unit filename="Renderer.h" />
 		<Unit filename="Shader.cpp" />
