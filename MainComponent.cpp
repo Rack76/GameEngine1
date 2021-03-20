@@ -8,6 +8,7 @@
 #include "Renderer.h"
 #include "collisionDetection.h"
 #include "CapsuleObject.h"
+#include "Input.h"
 #include <iostream>
 #include <cmath>
 
@@ -140,7 +141,7 @@ int main(int argc, char **argv)
     static_cast<CapsuleObject*>(worldObject[0])->setCapsule(0);
     static_cast<CapsuleObject*>(worldObject[1])->setCapsule(0);
 
-
+    Input input;
 
     glm::vec3 cp1;
     glm::vec3 cp2;
@@ -150,7 +151,7 @@ int main(int argc, char **argv)
     while(!WINDOW_QUIT)
     {
 
-       getInput();
+       input.getInput();
 
        static int lastTime = 0;
        static int firstTime = SDL_GetTicks();
