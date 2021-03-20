@@ -1,11 +1,9 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-#include "glm/glm.hpp"
-#include "glm/gtx/transform.hpp"
-#include "glm/gtc/type_ptr.hpp"
+#include "ACamera.h"
 
-class Camera
+class Camera : public ACamera
 {
 public:
     Camera(int windowWidth, int windowHeight);

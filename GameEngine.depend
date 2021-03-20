@@ -2429,13 +2429,11 @@
 1608383018 source:c:\users\utilisateur\documents\codeblocksprojects\game engine\camera.cpp
 	"Camera.h"
 
-1608383018 source:c:\users\utilisateur\documents\github\gameengine1\camera.cpp
+1616250258 source:c:\users\utilisateur\documents\github\gameengine1\camera.cpp
 	"Camera.h"
 
-1579107182 c:\users\utilisateur\documents\github\gameengine1\camera.h
-	"glm/glm.hpp"
-	"glm/gtx/transform.hpp"
-	"glm/gtc/type_ptr.hpp"
+1616250275 c:\users\utilisateur\documents\github\gameengine1\camera.h
+	"ACamera.h"
 
 1574972404 c:\users\utilisateur\documents\github\gameengine1\glm\glm.hpp
 	"detail/_fixes.hpp"
@@ -3808,4 +3806,33 @@
 1616178734 c:\users\utilisateur\documents\github\gameengine1\window.h
 	"GL/glew.h"
 	"SDL2/SDL.h"
+
+1616237731 source:c:\users\utilisateur\documents\github\gameengine1\maincomponent.cpp
+	"Window.h"
+	"Object.h"
+	"MeshLoader.h"
+	"Globals.h"
+	"Camera.h"
+	"TextureImageLoader.h"
+	"Shader.h"
+	"Renderer.h"
+	"collisionDetection.h"
+	"CapsuleObject.h"
+	"Input.h"
+	<iostream>
+	<cmath>
+
+1616239257 c:\users\utilisateur\documents\github\gameengine1\input.h
+	"SDL2/SDL.h"
+
+1616239257 source:c:\users\utilisateur\documents\github\gameengine1\input.cpp
+	"Input.h"
+
+1616250332 c:\users\utilisateur\documents\github\gameengine1\acamera.h
+	"glm/glm.hpp"
+	"glm/gtx/transform.hpp"
+	"glm/gtc/type_ptr.hpp"
+
+1616250312 source:c:\users\utilisateur\documents\github\gameengine1\acamera.cpp
+	"ACamera.h"
 

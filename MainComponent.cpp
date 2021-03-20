@@ -18,15 +18,6 @@
 std::vector<Object*> worldObject;
 Camera actualCamera(640, 480);
 
-    bool CAMERA_MOVE_FORWARD = false;
-    bool CAMERA_MOVE_BACKWARD = false;
-    bool CAMERA_MOVE_LEFT = false;
-    bool CAMERA_MOVE_RIGHT = false;
-    bool CAMERA_MOVE_UP = false;
-    bool CAMERA_MOVE_DOWN = false;
-    bool ROTATE_OBJECT_Z = false;
-    bool WINDOW_QUIT = false;
-
     SDL_Event event;
 
 bool conservativeAdvancement(CapsuleObject capsule1, CapsuleObject capsule2, float dt, float& TOC, int maximumIterations);
