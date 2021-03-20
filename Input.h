@@ -6,6 +6,9 @@ class Input
 {
 public:
 	void getInput();
+	
+private:
+	SDL_Event event;
 };
 
 #endif
