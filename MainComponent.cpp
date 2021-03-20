@@ -9,6 +9,8 @@
 #include "collisionDetection.h"
 #include "CapsuleObject.h"
 #include "Input.h"
+#include "Command.h"
+#include "DataBus.h"
 #include <iostream>
 #include <cmath>
 
@@ -29,36 +31,6 @@ void contactQueriesSphere(CapsuleObject* capsule1, CapsuleObject* capsule2, glm:
 
 void updateWorld(float duration)
 {
-       if(CAMERA_MOVE_FORWARD)
-       {
-           actualCamera.translateOrientation(1);
-       }
-       if(CAMERA_MOVE_BACKWARD)
-       {
-           actualCamera.translateOrientation(-1);
-       }
-       if(CAMERA_MOVE_RIGHT)
-       {
-           actualCamera.translateNormal(1);
-       }
-       if(CAMERA_MOVE_LEFT)
-       {
-           actualCamera.translateNormal(-1);
-       }
-       if(CAMERA_MOVE_UP)
-       {
-           actualCamera.translateUp(1);
-       }
-       if(CAMERA_MOVE_DOWN)
-       {
-           actualCamera.translateUp(-1);
-       }
-       if(ROTATE_OBJECT_Z)
-       {
-          static_cast<CapsuleObject*>(worldObject[1])->damping = 0.9;
-          worldObject[1]->linearVelocity = glm::vec3(-2, 0, 0);
-       }
-
     glm::vec3 contactNormal1, contactPoint, contactNormal2;
     float TOC;
 
@@ -132,17 +104,28 @@ int main(int argc, char **argv)
     static_cast<CapsuleObject*>(worldObject[0])->setCapsule(0);
     static_cast<CapsuleObject*>(worldObject[1])->setCapsule(0);
 
-    Input input;
+    Command** mapArray = new Command*[5000];
+    DataBus* dtBus;
+
+    Input input(mapArray, dtBus);
 
     glm::vec3 cp1;
     glm::vec3 cp2;
 
     int temp, duration;
 
+    SDL_Event event;
+
+    bool WINDOW_QUIT = false;
+
     while(!WINDOW_QUIT)
     {
+       SDL_PollEvent(&event);
 
-       input.getInput();
+       if(event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE)
+            WINDOW_QUIT = true;
+
+       input.translateEventAndProcessCommand();
 
        static int lastTime = 0;
        static int firstTime = SDL_GetTicks();

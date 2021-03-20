@@ -23,7 +23,7 @@
 					<Add library="libSDL2main.a" />
 					<Add library="libSDL2.dll.a" />
 					<Add library="libSDL2_image.dll.a" />
-					<Add directory="C:/Users/Utilisateur/Documents/codeBlocksProjects/Game Engine/dependencies" />
+					<Add directory="C:/Users/Utilisateur/Documents/GitHub/GameEngine1/dependencies" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -42,12 +42,16 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="ACamera.cpp" />
+		<Unit filename="ACamera.h" />
 		<Unit filename="Camera.cpp" />
 		<Unit filename="Camera.h" />
 		<Unit filename="CapsuleObject.h" />
 		<Unit filename="Character.h" />
 		<Unit filename="Cube.h" />
 		<Unit filename="Globals.h" />
+		<Unit filename="Input.cpp" />
+		<Unit filename="Input.h" />
 		<Unit filename="MainComponent.cpp" />
 		<Unit filename="MeshLoader.cpp" />
 		<Unit filename="MeshLoader.h" />

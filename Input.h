@@ -3,21 +3,23 @@
 
 #include "SDL2/SDL.h"
 #include "ACamera.h"
-#include "Camera.h"
+#include "DataBus.h"
+#include "Command.h"
 
 class Input
-
 {
 public:
-    Input(ACamera* camera)
+    Input(Command **mapArray, DataBus* dtBus)
     {
-        this->camera = camera;
+        this->dtBus = dtBus;
+        this->mapArray = mapArray;
     }
-	void getInput();
+	void translateEventAndProcessCommand();
 
 private:
+    DataBus* dtBus;
 	SDL_Event event;
-	ACamera* camera;
+    Command **mapArray;
 };
 
 #endif
