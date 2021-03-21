@@ -47,10 +47,10 @@
 		<Unit filename="Camera.cpp" />
 		<Unit filename="Camera.h" />
 		<Unit filename="CapsuleObject.h" />
-		<Unit filename="Character.h" />
 		<Unit filename="Command.h" />
-		<Unit filename="CommandEscape.h" />
-		<Unit filename="Cube.h" />
+		<Unit filename="CommandRotateCamera.h" />
+		<Unit filename="DataBus.cpp" />
+		<Unit filename="DataBus.h" />
 		<Unit filename="Globals.h" />
 		<Unit filename="Input.cpp" />
 		<Unit filename="Input.h" />

@@ -17,6 +17,7 @@ public:
             mapArray[i] = nullptr;
     }
 	void translateEventAndProcessCommand();
+    void insertCommand(int SDL_EVENT, Command* cmd);
 
 private:
     DataBus* dtBus;

@@ -3807,7 +3807,7 @@
 	"GL/glew.h"
 	"SDL2/SDL.h"
 
-1616330856 source:c:\users\utilisateur\documents\github\gameengine1\maincomponent.cpp
+1616334211 source:c:\users\utilisateur\documents\github\gameengine1\maincomponent.cpp
 	"Window.h"
 	"Object.h"
 	"MeshLoader.h"
@@ -3820,18 +3820,20 @@
 	"CapsuleObject.h"
 	"Input.h"
 	"Command.h"
+	"CommandRotateCamera.h"
 	"DataBus.h"
 	<iostream>
 	<cmath>
 
-1616330774 c:\users\utilisateur\documents\github\gameengine1\input.h
+1616335454 c:\users\utilisateur\documents\github\gameengine1\input.h
 	"SDL2/SDL.h"
 	"ACamera.h"
 	"DataBus.h"
 	"Command.h"
 
-1616328479 source:c:\users\utilisateur\documents\github\gameengine1\input.cpp
+1616334026 source:c:\users\utilisateur\documents\github\gameengine1\input.cpp
 	"Input.h"
+	<iostream>
 
 1616279052 c:\users\utilisateur\documents\github\gameengine1\acamera.h
 	"glm/glm.hpp"
@@ -3849,5 +3851,12 @@
 	<map>
 	<utility>
 
-1616281966 c:\users\utilisateur\documents\github\gameengine1\command.h
+1616334007 c:\users\utilisateur\documents\github\gameengine1\command.h
+	"DataBus.h"
+
+1616334770 c:\users\utilisateur\documents\github\gameengine1\commandrotatecamera.h
+	"Command.h"
+	"ACamera.h"
+	"DataBus.h"
+	"SDL2/SDL.h"
 

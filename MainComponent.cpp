@@ -10,6 +10,7 @@
 #include "CapsuleObject.h"
 #include "Input.h"
 #include "Command.h"
+#include "CommandRotateCamera.h"
 #include "DataBus.h"
 #include <iostream>
 #include <cmath>
