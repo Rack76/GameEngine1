@@ -9,10 +9,12 @@
 class Input
 {
 public:
-    Input(Command **mapArray, DataBus* dtBus)
+    Input(DataBus* dtBus)
     {
         this->dtBus = dtBus;
-        this->mapArray = mapArray;
+        mapArray = new Command*[3000];
+        for(int i = 0; i < sizeof(mapArray); i++)
+            mapArray[i] = nullptr;
     }
 	void translateEventAndProcessCommand();
 

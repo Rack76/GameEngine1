@@ -107,7 +107,7 @@ int main(int argc, char **argv)
     Command** mapArray = new Command*[5000];
     DataBus* dtBus;
 
-    Input input(mapArray, dtBus);
+    Input input(dtBus);
 
     glm::vec3 cp1;
     glm::vec3 cp2;
