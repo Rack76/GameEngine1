@@ -3,9 +3,9 @@
 
 #include <vector>
 #include "Object.h"
-#include "Camera.h"
+#include "ACamera.h"
 
 extern std::vector<Object*> worldObject;
-extern Camera actualCamera;
+extern ACamera* actualCamera;
 
 #endif // GLOBAL_H

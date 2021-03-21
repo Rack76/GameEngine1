@@ -3,7 +3,8 @@
 
 void Input::translateEventAndProcessCommand()
 {
-    SDL_PollEvent(&event);
+    while(SDL_PollEvent(&event))
+    {
     switch(event.type)
     {
     case SDL_KEYDOWN:
@@ -25,19 +26,13 @@ void Input::translateEventAndProcessCommand()
     switch(event.motion.type)
     {
     case SDL_MOUSEMOTION:
-        try
-        {
+
+
             if(mapArray[SDL_MOUSEMOTION])
                 mapArray[SDL_MOUSEMOTION]->proc(dtBus);
 
-            if(SDL_MOUSEMOTION > sizeof(mapArray))
-                throw std::string("out of bounds - Input::translateEventAndProcessCommand()");
+
         }
-        catch(std::string error)
-        {
-            std::cerr << error;
-        }
-        break;
     }
 }
 

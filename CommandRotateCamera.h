@@ -5,16 +5,21 @@
 #include "ACamera.h"
 #include "DataBus.h"
 #include "SDL2/SDL.h"
+#include "Input.h"
 
 class CommandRotateCamera : public Command
 {
 public:
+    CommandRotateCamera(Input* input, ACamera* camera) : input(input), camera(camera) {}
+
     void proc(DataBus* dtBus)
     {
-        ACamera* camera = (ACamera*)dtBus->data.at("camera");
-        SDL_MouseMotionEvent eventMotion = *(SDL_MouseMotionEvent*)dtBus->data.at("eventMotion");
-        camera->rotateCamera(eventMotion.x, eventMotion.y);
+        SDL_MouseMotionEvent eventMotion = input->event.motion;
+        camera->rotateCamera(eventMotion.xrel, eventMotion.yrel);
     }
+private:
+    Input* input;
+    ACamera* camera;
 };
 
 #endif // COMMAND_ESCAPE_H

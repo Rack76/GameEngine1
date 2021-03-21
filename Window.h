@@ -10,6 +10,8 @@ class Window
     Window(int XLocation, int YLocation, int width, int height);
     void render();
     void cleanUp();
+
+    private:
     SDL_Window* window;
     SDL_GLContext context;
 };

@@ -11,18 +11,12 @@ void Renderer::draw(int i)
     glEnableVertexAttribArray(1);
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 20, (const void*)12);
     worldObject[i]->setPosition();
-    comboMatrix = actualCamera.Projection * actualCamera.View * worldObject[i]->Model;
+    comboMatrix = actualCamera->Projection * actualCamera->View * worldObject[i]->Model;
     glUniformMatrix4fv(glGetUniformLocation(worldObject[i]->shader.programID, "comboMatrix"), 1, GL_FALSE, glm::value_ptr(comboMatrix));
     glDrawArrays(GL_TRIANGLES, 0, worldObject[i]->indicesCount);
 }
 
 void Renderer::drawIndex(int i, unsigned int arrayB[])
 {
-    glBindBuffer(GL_ARRAY_BUFFER, worldObject[i]->vbo);
-    glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 12, (const void*)0);
-    worldObject[i]->setPosition();
-    comboMatrix = actualCamera.Projection * actualCamera.View * worldObject[i]->Model;
-    glUniformMatrix4fv(glGetUniformLocation(m_shader.programID, "comboMatrix"), 1, GL_FALSE, glm::value_ptr(comboMatrix));
-    glDrawElements(GL_TRIANGLES, 200, GL_UNSIGNED_INT, arrayB);
+
 }

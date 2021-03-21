@@ -19,7 +19,7 @@
 #define g 9.8
 
 std::vector<Object*> worldObject;
-Camera actualCamera(640, 480);
+ACamera* actualCamera = new Camera(640, 480);
 
     SDL_Event event;
 
@@ -105,10 +105,13 @@ int main(int argc, char **argv)
     static_cast<CapsuleObject*>(worldObject[0])->setCapsule(0);
     static_cast<CapsuleObject*>(worldObject[1])->setCapsule(0);
 
-    Command** mapArray = new Command*[5000];
-    DataBus* dtBus;
+    DataBus* dtBus = new DataBus();
 
     Input input(dtBus);
+
+    Command* cmd = new CommandRotateCamera(&input, actualCamera);
+
+    input.insertCommand(SDL_MOUSEMOTION, cmd);
 
     glm::vec3 cp1;
     glm::vec3 cp2;

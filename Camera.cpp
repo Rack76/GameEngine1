@@ -1,17 +1,7 @@
 #include "Camera.h"
+#include <iostream>
 
 #define RADIAN(degrees) (degrees * (3.14159265359 / 180))
-
-
-Camera::Camera(int windowWidth, int windowHeight) : ACamera(windowWidth, windowHeight)
-{
-
-}
-
-Camera::Camera(const Camera& camera) : ACamera(camera)
-{
-
-}
 
 void Camera::setCamera()
 {
@@ -37,7 +27,6 @@ void Camera::rotateCamera(float xrel, float yrel)
     {
         phi = RADIAN(-89);
     }
-
     setCamera();
 }
 

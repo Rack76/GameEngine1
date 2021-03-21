@@ -15,6 +15,9 @@ public:
     virtual void translateOrientation(int sens)=0;
     virtual void translateNormal(int sens)=0;
     virtual void translateUp(int sens)=0;
+
+public:
+
     int m_windowWidth;
     int m_windowHeight;
     float theta;

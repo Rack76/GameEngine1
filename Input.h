@@ -12,14 +12,14 @@ public:
     Input(DataBus* dtBus)
     {
         this->dtBus = dtBus;
-        mapArray = new Command*[3000];
-        for(int i = 0; i < sizeof(mapArray); i++)
+        mapArray = new Command*[2000];
+        for(int i = 0; i < 2000; i++)
             mapArray[i] = nullptr;
     }
 	void translateEventAndProcessCommand();
     void insertCommand(int SDL_EVENT, Command* cmd);
 
-private:
+
     DataBus* dtBus;
 	SDL_Event event;
     Command **mapArray;
